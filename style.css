@@ -1,81 +1,139 @@
+:root {
+  --bg: #140024;
+  --accent: #ff00cc;
+  --shadow: #ff00cc55;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
-  background: #f2f2f2;
-  color: #333;
+  background: linear-gradient(135deg, var(--bg), #23002e);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   padding: 2rem;
 }
 
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
 .container {
-  max-width: 960px;
-  margin: auto;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 1400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 0 25px var(--shadow);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 .translate-box {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 select,
 textarea {
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  border: none;
+  background: #1a001f;
+  color: #fff;
+  box-shadow: 0 0 12px var(--shadow);
 }
 
 textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 160px;
 }
 
 .controls {
   display: flex;
+  gap: 1.5rem;
   justify-content: space-between;
-  gap: 1rem;
 }
 
 .controls button {
   flex: 1;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
   border: none;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: white;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
   cursor: pointer;
+  box-shadow: 0 0 18px var(--shadow);
+  transition: all 0.3s ease;
 }
 
 .controls button:hover {
-  background-color: #0056b3;
+  background: #ff33cc;
+  transform: scale(1.06);
 }
 
 #translatedText {
-  min-height: 100px;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f9f9f9;
+  min-height: 160px;
+  padding: 1rem;
+  border-radius: 16px;
+  background: #1a001f;
+  color: #eee;
+  font-size: 1.2rem;
+  box-shadow: 0 0 12px var(--shadow);
 }
 
 footer {
   text-align: center;
+  font-size: 1rem;
+  color: #aaa;
   margin-top: 2rem;
-  color: #888;
-  font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls button {
+    font-size: 1rem;
+  }
+
+  select,
+  textarea,
+  #translatedText {
+    font-size: 1rem;
+  }
+                           }
