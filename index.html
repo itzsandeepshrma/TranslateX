@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TranslateX - Fast Modern Translator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TranslateX</h1>
+    <div class="translate-box">
+      <select id="fromLang">
+        <option value="en">🇺🇸 English</option>
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="ja">🇯🇵 Japanese</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+      </select>
+
+      <textarea id="inputText" placeholder="Enter text here..." oninput="translateText()"></textarea>
+
+      <div class="controls">
+        <button onclick="swapLanguages()">Swap</button>
+        <button onclick="clearText()">Clear</button>
+        <button onclick="speakText()">🔊 Speak</button>
+      </div>
+
+      <select id="toLang">
+        <option value="hi">🇮🇳 Hindi</option>
+        <option value="en">🇺🇸 English</option>
+        <option value="ja">🇯🇵 Japanese</option>
+        <option value="es">🇪🇸 Spanish</option>
+        <option value="fr">🇫🇷 French</option>
+      </select>
+
+      <div id="translatedText">Translated text will appear here...</div>
+    </div>
+  </div>
+
+  <footer>© 2025 sᴧɴᴅᴇᴇᴘ sʜᴧʀᴍᴧ ᴧʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
